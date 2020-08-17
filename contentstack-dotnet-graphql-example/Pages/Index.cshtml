@@ -6,22 +6,24 @@
 
 
 
-    @foreach (contentstack_dotnet_graphql_example.Models.Product product in Model.Products.all_product.items)
-    {
-        <div class="col-md-4 col-sm-6 col-xs-12 women-dresses">
-            <div class="women-grids wp1 animated wow slideInUp product-item" data-wow-delay=".5s">
-                <a href={{ product.url }}>
-                    <div class="product-img">
-                        <img src="@product.featured_imageConnection.edges[0].node.url" alt="" />
-                    </div>
-                </a>
-                <h4>@product.title</h4>
-                <h5>@product.price</h5>
-            </div>
+@foreach (contentstack_dotnet_graphql_example.Models.Product product in Model.Products.all_product.items)
+{
+    <div class="col-md-4 col-sm-6 col-xs-12 women-dresses">
+        <div class="women-grids wp1 animated wow slideInUp product-item" data-wow-delay=".5s">
+            <a href={{ product.url }}>
+                <div class="product-img">
+                    <img src="@product.featured_imageConnection.edges[0].node.url" alt="" />
+                </div>
+            </a>
+            <h4>@product.title</h4>
+            <h5>@product.price</h5>
         </div>
-    }
+    </div>
+}
 
 
+@if (Model.Products.all_product.total > 6)
+{
     <div class="pagination">
         @if (Model.ShowPrevious)
         {
@@ -29,10 +31,12 @@
             <a asp-page="./Index" asp-route-currentpage="@(Model.CurrentPage -1)" class="prev">Previous</a>
 
         }
-        @if ((Model.Products.all_product.total / 1 + 1) > Model.CurrentPage)
+        @if ((Model.Products.all_product.total / 6 + 1) > Model.CurrentPage)
         {
 
             <a asp-page="./Index" asp-route-currentpage="@(Model.CurrentPage + 1)" class="next">Next</a>
 
         }
     </div>
+
+}

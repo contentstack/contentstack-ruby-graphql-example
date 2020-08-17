@@ -52,8 +52,8 @@ namespace contentstack_dotnet_graphql_example.Pages
                 }",
                 OperationName = "Products",
                 Variables = new {
-                    skip = (CurrentPage - 1) * 9,
-                    limit = 9
+                    skip = (CurrentPage - 1) * 6,
+                    limit = 6
                 }
             };
             try
