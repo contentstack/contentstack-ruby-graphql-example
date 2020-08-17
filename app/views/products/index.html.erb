@@ -1,0 +1,33 @@
+
+<div class="wrapper">
+	<header>
+		<div class="container">
+		  <div class="row">
+		  	<span class="logo">
+		  		<a href=""><img src="images/contentstack-logo-color.svg" alt="image"></a>
+		  	</span>
+		  	<nav>
+		  	</nav>		
+		  </div>		
+		</div>	
+	</header>
+    <div class="thumbnail-box">	
+		<div class="container">
+			<div class="row">
+					<ul>
+                        <% all_product.items.each do |product| %>
+                            <li>
+                                <span class="thum-img moreBox blogBox"><img src=<%= product.featured_image_connection.edges[0].node.url%> alt=<%= product.featured_image_connection.edges[0].node.filename%>></span>
+                                <div class="thumbnail-detail">
+                                    <h3><a href="#"><%=  product.title %> </a></h3>
+                                </div>
+                                <div class = "price">
+                                    <h5><a href="#"><%=  product.price %></a></h5>
+                                </div>		
+                            </li>
+                        <% end %>
+					</ul>		
+				</div>	
+			</div>	
+	</div>
+</div>
