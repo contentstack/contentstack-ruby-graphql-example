@@ -1,0 +1,8 @@
+Style/FrozenStringLiteralComment:
+    Enabled: false
+AllCops:
+    Exclude:
+        - 'bin/**/*'
+        - 'node_modules/**/*'
+        - 'Gemfile'
+      
