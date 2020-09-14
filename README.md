@@ -20,7 +20,7 @@ We have created an in-depth tutorial on how you can create a product catalog app
 
 By following the steps given in the step-by-step tutorial, you can create a fully functional product catalog app.
 
-[Create a product catalog using Rails, GraphQL Client, and Contentstack's GraphQL API](https://www.contentstack.com/docs/example-apps/build-a-product-catalog-using-ruby-and-contentstack)
+[Create a product catalog using Rails, GraphQL Client, and Contentstack's GraphQL API](https://www.contentstack.com/docs/developers/sample-apps/build-a-product-catalog-app-using-ruby-on-rails-graphql-client-and-contentstack-graphql-apis)
 
 ### Documentation
 * Read Contentstack [docs](https://www.contentstack.com/docs/)
