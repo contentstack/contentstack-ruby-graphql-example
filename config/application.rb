@@ -32,23 +32,17 @@ module ContentstackRubyGraphqlExample
 
   unless (environment = Application.secrets.environment)
     raise 'Environment missing'
-
   end
 
-  HTTPAdapter = GraphQL::Client::HTTP.new("https://#{host}/stacks/#{api_key}?environment=#{environment}") do
-    def headers(context)
-      unless (delivery_token = context[:access_token] || Application.secrets.delivery_token)
-        raise 'Delivery token missing'
-      end
-
-      {
-        'access_token': delivery_token
-      }
-    end
+  unless (delivery_token =  Application.secrets.delivery_token)
+    raise 'Delivery token missing'
   end
 
-  Client = GraphQL::Client.new(
-    schema: Application.root.join('db/schema.json').to_s,
-    execute: HTTPAdapter
+
+  Client = Graphlient::Client.new("https://#{host}/stacks/#{api_key}?environment=#{environment}", 
+      headers: {
+        'access_token' => delivery_token
+      },
+      schema_path: Application.root.join('db/ecommerce.json')
   )
 end

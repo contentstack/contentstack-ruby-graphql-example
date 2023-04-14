@@ -1,4 +1,4 @@
-Query = ContentstackRubyGraphqlExample::Client.parse <<-'GRAPHQL'
+Query = ContentstackRubyGraphqlExample::Client.query <<~GRAPHQL
     query {
         all_product(locale:"en-us",limit:10) {
             total
