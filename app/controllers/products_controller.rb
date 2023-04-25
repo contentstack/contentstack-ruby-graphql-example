@@ -1,10 +1,12 @@
 # Product controller file
 class ProductsController < ApplicationController
   def index
-    data = query Query
+    
+    response = Product::fetchProduct
+    data = response.data.all_product
 
     render 'products/index', locals: {
-      all_product: data.all_product
+      all_product: data
     }
   end
 end
