@@ -31,7 +31,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 # gem 'graphql-client'
 
-gem 'graphlient'
+gem 'graphlient', '>= 0.8.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
