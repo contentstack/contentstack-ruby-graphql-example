@@ -17,7 +17,11 @@
 					<ul>
                         <% all_product.items.each do |product| %>
                             <li>
-                                <span class="thum-img moreBox blogBox"><img src=<%= product.featured_image_connection.edges[0].node.url%> alt=<%= product.featured_image_connection.edges[0].node.filename%>></span>
+                                <span class="thum-img moreBox blogBox">
+									<%= image_tag product.featured_image_connection.edges[0].node.url, alt: product.featured_image_connection.edges[0].node.filename %>
+								</span>
+
+
                                 <div class="thumbnail-detail">
                                     <h3><a href="#"><%=  product.title %> </a></h3>
                                 </div>
