@@ -1,8 +1,6 @@
 [![Contentstack](https://www.contentstack.com/docs/static/images/contentstack.png)](https://www.contentstack.com/)
 
-> **⚠️ IMPORTANT NOTICE: This repository is no longer actively maintained.**
-> 
-> This project will no longer receive updates, bug fixes, or support. Please consider this when using it in production environments. For the latest Contentstack examples and best practices, please visit the [official Contentstack documentation](https://www.contentstack.com/docs/) and [Contentstack GitHub organization](https://github.com/contentstack).
+**Note:** This app is no longer maintained. It remains available for reference. If you have questions regarding this, please reach out to our [support team](mailto:support@contentstack.com) and we will do our best to help!
 
 ## Create a product catalog using Ruby on Rails (or simply Rails), GraphQL Client, and Contentstack's GraphQL APIs.
 
