@@ -1,5 +1,9 @@
 [![Contentstack](https://www.contentstack.com/docs/static/images/contentstack.png)](https://www.contentstack.com/)
 
+> **⚠️ IMPORTANT NOTICE: This repository is no longer actively maintained.**
+> 
+> This project will no longer receive updates, bug fixes, or support. Please consider this when using it in production environments. For the latest Contentstack examples and best practices, please visit the [official Contentstack documentation](https://www.contentstack.com/docs/) and [Contentstack GitHub organization](https://github.com/contentstack).
+
 ## Create a product catalog using Ruby on Rails (or simply Rails), GraphQL Client, and Contentstack's GraphQL APIs.
 
 **About Contentstack**: Contentstack is a headless CMS with an API-first approach that puts content at the centre. It is designed to simplify the process of publication by separating code from content.
